@@ -1,4 +1,3 @@
-require('dotenv').config()
 import { Injectable } from '@nestjs/common';
 const { Configuration, OpenAIApi } = require("openai");
 
@@ -10,6 +9,7 @@ const openai = new OpenAIApi(configuration);
 @Injectable()
 export class DalleService {
   async getImageUrl(): Promise<string> {
+    console.log(process.env.OPENAI_API_KEY)
     return new Promise((resolve, reject) => {
       openai.createImage({
         prompt: 'duck',
