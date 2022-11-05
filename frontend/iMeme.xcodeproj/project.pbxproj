@@ -1,0 +1,794 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4ABC5D892916BED10073AB48 /* iMemeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC5D882916BED10073AB48 /* iMemeApp.swift */; };
+		4ABC5D8B2916BED10073AB48 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC5D8A2916BED10073AB48 /* ContentView.swift */; };
+		4ABC5D8D2916BED20073AB48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC5D8C2916BED20073AB48 /* Assets.xcassets */; };
+		4ABC5D902916BED20073AB48 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC5D8F2916BED20073AB48 /* Preview Assets.xcassets */; };
+		4ABC5D922916BED20073AB48 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC5D912916BED20073AB48 /* Persistence.swift */; };
+		4ABC5D952916BED20073AB48 /* iMeme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC5D932916BED20073AB48 /* iMeme.xcdatamodeld */; };
+		4ABC5D9F2916BED20073AB48 /* iMemeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC5D9E2916BED20073AB48 /* iMemeTests.swift */; };
+		4ABC5DA92916BED20073AB48 /* iMemeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC5DA82916BED20073AB48 /* iMemeUITests.swift */; };
+		4ABC5DAB2916BED20073AB48 /* iMemeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC5DAA2916BED20073AB48 /* iMemeUITestsLaunchTests.swift */; };
+		4ABC5DBE2916BF330073AB48 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ABC5DBD2916BF330073AB48 /* Messages.framework */; };
+		4ABC5DC12916BF340073AB48 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABC5DC02916BF340073AB48 /* MessagesViewController.swift */; };
+		4ABC5DC42916BF340073AB48 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC5DC22916BF340073AB48 /* MainInterface.storyboard */; };
+		4ABC5DC62916BF350073AB48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4ABC5DC52916BF350073AB48 /* Assets.xcassets */; };
+		4ABC5DCA2916BF350073AB48 /* iMeme-extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4ABC5DBB2916BF330073AB48 /* iMeme-extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4ABC5D9B2916BED20073AB48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4ABC5D7D2916BED10073AB48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4ABC5D842916BED10073AB48;
+			remoteInfo = iMeme;
+		};
+		4ABC5DA52916BED20073AB48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4ABC5D7D2916BED10073AB48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4ABC5D842916BED10073AB48;
+			remoteInfo = iMeme;
+		};
+		4ABC5DC82916BF350073AB48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4ABC5D7D2916BED10073AB48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4ABC5DBA2916BF330073AB48;
+			remoteInfo = "iMeme-extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4ABC5DCE2916BF350073AB48 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4ABC5DCA2916BF350073AB48 /* iMeme-extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4ABC5D852916BED10073AB48 /* iMeme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMeme.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ABC5D882916BED10073AB48 /* iMemeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMemeApp.swift; sourceTree = "<group>"; };
+		4ABC5D8A2916BED10073AB48 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4ABC5D8C2916BED20073AB48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4ABC5D8F2916BED20073AB48 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4ABC5D912916BED20073AB48 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4ABC5D942916BED20073AB48 /* iMeme.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iMeme.xcdatamodel; sourceTree = "<group>"; };
+		4ABC5D9A2916BED20073AB48 /* iMemeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMemeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ABC5D9E2916BED20073AB48 /* iMemeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMemeTests.swift; sourceTree = "<group>"; };
+		4ABC5DA42916BED20073AB48 /* iMemeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMemeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ABC5DA82916BED20073AB48 /* iMemeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMemeUITests.swift; sourceTree = "<group>"; };
+		4ABC5DAA2916BED20073AB48 /* iMemeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMemeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4ABC5DBB2916BF330073AB48 /* iMeme-extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iMeme-extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ABC5DBD2916BF330073AB48 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		4ABC5DC02916BF340073AB48 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		4ABC5DC32916BF340073AB48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		4ABC5DC52916BF350073AB48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4ABC5DC72916BF350073AB48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4ABC5DCF2916CF620073AB48 /* iMeme-extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "iMeme-extension.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4ABC5D822916BED10073AB48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ABC5D972916BED20073AB48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ABC5DA12916BED20073AB48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ABC5DB82916BF330073AB48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ABC5DBE2916BF330073AB48 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4ABC5D7C2916BED10073AB48 = {
+			isa = PBXGroup;
+			children = (
+				4ABC5D872916BED10073AB48 /* iMeme */,
+				4ABC5D9D2916BED20073AB48 /* iMemeTests */,
+				4ABC5DA72916BED20073AB48 /* iMemeUITests */,
+				4ABC5DBF2916BF340073AB48 /* iMeme-extension */,
+				4ABC5DBC2916BF330073AB48 /* Frameworks */,
+				4ABC5D862916BED10073AB48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4ABC5D862916BED10073AB48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4ABC5D852916BED10073AB48 /* iMeme.app */,
+				4ABC5D9A2916BED20073AB48 /* iMemeTests.xctest */,
+				4ABC5DA42916BED20073AB48 /* iMemeUITests.xctest */,
+				4ABC5DBB2916BF330073AB48 /* iMeme-extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4ABC5D872916BED10073AB48 /* iMeme */ = {
+			isa = PBXGroup;
+			children = (
+				4ABC5D882916BED10073AB48 /* iMemeApp.swift */,
+				4ABC5D8A2916BED10073AB48 /* ContentView.swift */,
+				4ABC5D8C2916BED20073AB48 /* Assets.xcassets */,
+				4ABC5D912916BED20073AB48 /* Persistence.swift */,
+				4ABC5D932916BED20073AB48 /* iMeme.xcdatamodeld */,
+				4ABC5D8E2916BED20073AB48 /* Preview Content */,
+			);
+			path = iMeme;
+			sourceTree = "<group>";
+		};
+		4ABC5D8E2916BED20073AB48 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4ABC5D8F2916BED20073AB48 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4ABC5D9D2916BED20073AB48 /* iMemeTests */ = {
+			isa = PBXGroup;
+			children = (
+				4ABC5D9E2916BED20073AB48 /* iMemeTests.swift */,
+			);
+			path = iMemeTests;
+			sourceTree = "<group>";
+		};
+		4ABC5DA72916BED20073AB48 /* iMemeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4ABC5DA82916BED20073AB48 /* iMemeUITests.swift */,
+				4ABC5DAA2916BED20073AB48 /* iMemeUITestsLaunchTests.swift */,
+			);
+			path = iMemeUITests;
+			sourceTree = "<group>";
+		};
+		4ABC5DBC2916BF330073AB48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4ABC5DBD2916BF330073AB48 /* Messages.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4ABC5DBF2916BF340073AB48 /* iMeme-extension */ = {
+			isa = PBXGroup;
+			children = (
+				4ABC5DCF2916CF620073AB48 /* iMeme-extension.entitlements */,
+				4ABC5DC02916BF340073AB48 /* MessagesViewController.swift */,
+				4ABC5DC22916BF340073AB48 /* MainInterface.storyboard */,
+				4ABC5DC52916BF350073AB48 /* Assets.xcassets */,
+				4ABC5DC72916BF350073AB48 /* Info.plist */,
+			);
+			path = "iMeme-extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4ABC5D842916BED10073AB48 /* iMeme */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ABC5DAE2916BED20073AB48 /* Build configuration list for PBXNativeTarget "iMeme" */;
+			buildPhases = (
+				4ABC5D812916BED10073AB48 /* Sources */,
+				4ABC5D822916BED10073AB48 /* Frameworks */,
+				4ABC5D832916BED10073AB48 /* Resources */,
+				4ABC5DCE2916BF350073AB48 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4ABC5DC92916BF350073AB48 /* PBXTargetDependency */,
+			);
+			name = iMeme;
+			productName = iMeme;
+			productReference = 4ABC5D852916BED10073AB48 /* iMeme.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4ABC5D992916BED20073AB48 /* iMemeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ABC5DB12916BED20073AB48 /* Build configuration list for PBXNativeTarget "iMemeTests" */;
+			buildPhases = (
+				4ABC5D962916BED20073AB48 /* Sources */,
+				4ABC5D972916BED20073AB48 /* Frameworks */,
+				4ABC5D982916BED20073AB48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4ABC5D9C2916BED20073AB48 /* PBXTargetDependency */,
+			);
+			name = iMemeTests;
+			productName = iMemeTests;
+			productReference = 4ABC5D9A2916BED20073AB48 /* iMemeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4ABC5DA32916BED20073AB48 /* iMemeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ABC5DB42916BED20073AB48 /* Build configuration list for PBXNativeTarget "iMemeUITests" */;
+			buildPhases = (
+				4ABC5DA02916BED20073AB48 /* Sources */,
+				4ABC5DA12916BED20073AB48 /* Frameworks */,
+				4ABC5DA22916BED20073AB48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4ABC5DA62916BED20073AB48 /* PBXTargetDependency */,
+			);
+			name = iMemeUITests;
+			productName = iMemeUITests;
+			productReference = 4ABC5DA42916BED20073AB48 /* iMemeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		4ABC5DBA2916BF330073AB48 /* iMeme-extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4ABC5DCB2916BF350073AB48 /* Build configuration list for PBXNativeTarget "iMeme-extension" */;
+			buildPhases = (
+				4ABC5DB72916BF330073AB48 /* Sources */,
+				4ABC5DB82916BF330073AB48 /* Frameworks */,
+				4ABC5DB92916BF330073AB48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iMeme-extension";
+			productName = "iMeme-extension";
+			productReference = 4ABC5DBB2916BF330073AB48 /* iMeme-extension.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4ABC5D7D2916BED10073AB48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					4ABC5D842916BED10073AB48 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					4ABC5D992916BED20073AB48 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 4ABC5D842916BED10073AB48;
+					};
+					4ABC5DA32916BED20073AB48 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = 4ABC5D842916BED10073AB48;
+					};
+					4ABC5DBA2916BF330073AB48 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = 4ABC5D802916BED10073AB48 /* Build configuration list for PBXProject "iMeme" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4ABC5D7C2916BED10073AB48;
+			productRefGroup = 4ABC5D862916BED10073AB48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4ABC5D842916BED10073AB48 /* iMeme */,
+				4ABC5D992916BED20073AB48 /* iMemeTests */,
+				4ABC5DA32916BED20073AB48 /* iMemeUITests */,
+				4ABC5DBA2916BF330073AB48 /* iMeme-extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4ABC5D832916BED10073AB48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ABC5D902916BED20073AB48 /* Preview Assets.xcassets in Resources */,
+				4ABC5D8D2916BED20073AB48 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ABC5D982916BED20073AB48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ABC5DA22916BED20073AB48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ABC5DB92916BF330073AB48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ABC5DC62916BF350073AB48 /* Assets.xcassets in Resources */,
+				4ABC5DC42916BF340073AB48 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4ABC5D812916BED10073AB48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ABC5D922916BED20073AB48 /* Persistence.swift in Sources */,
+				4ABC5D8B2916BED10073AB48 /* ContentView.swift in Sources */,
+				4ABC5D892916BED10073AB48 /* iMemeApp.swift in Sources */,
+				4ABC5D952916BED20073AB48 /* iMeme.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ABC5D962916BED20073AB48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ABC5D9F2916BED20073AB48 /* iMemeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ABC5DA02916BED20073AB48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ABC5DAB2916BED20073AB48 /* iMemeUITestsLaunchTests.swift in Sources */,
+				4ABC5DA92916BED20073AB48 /* iMemeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4ABC5DB72916BF330073AB48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ABC5DC12916BF340073AB48 /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4ABC5D9C2916BED20073AB48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4ABC5D842916BED10073AB48 /* iMeme */;
+			targetProxy = 4ABC5D9B2916BED20073AB48 /* PBXContainerItemProxy */;
+		};
+		4ABC5DA62916BED20073AB48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4ABC5D842916BED10073AB48 /* iMeme */;
+			targetProxy = 4ABC5DA52916BED20073AB48 /* PBXContainerItemProxy */;
+		};
+		4ABC5DC92916BF350073AB48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4ABC5DBA2916BF330073AB48 /* iMeme-extension */;
+			targetProxy = 4ABC5DC82916BF350073AB48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4ABC5DC22916BF340073AB48 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4ABC5DC32916BF340073AB48 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4ABC5DAC2916BED20073AB48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4ABC5DAD2916BED20073AB48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4ABC5DAF2916BED20073AB48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iMeme/Preview Content\"";
+				DEVELOPMENT_TEAM = AV55NAFUG2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Team4.iMeme;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4ABC5DB02916BED20073AB48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iMeme/Preview Content\"";
+				DEVELOPMENT_TEAM = AV55NAFUG2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Team4.iMeme;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4ABC5DB22916BED20073AB48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AV55NAFUG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Team4.iMemeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iMeme.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iMeme";
+			};
+			name = Debug;
+		};
+		4ABC5DB32916BED20073AB48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AV55NAFUG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Team4.iMemeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iMeme.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iMeme";
+			};
+			name = Release;
+		};
+		4ABC5DB52916BED20073AB48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AV55NAFUG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Team4.iMemeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iMeme;
+			};
+			name = Debug;
+		};
+		4ABC5DB62916BED20073AB48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AV55NAFUG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Team4.iMemeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = iMeme;
+			};
+			name = Release;
+		};
+		4ABC5DCC2916BF350073AB48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = "iMeme-extension/iMeme-extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AV55NAFUG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iMeme-extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "iMeme-extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Team4.iMeme.iMeme-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4ABC5DCD2916BF350073AB48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_ENTITLEMENTS = "iMeme-extension/iMeme-extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AV55NAFUG2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iMeme-extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "iMeme-extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Team4.iMeme.iMeme-extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4ABC5D802916BED10073AB48 /* Build configuration list for PBXProject "iMeme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ABC5DAC2916BED20073AB48 /* Debug */,
+				4ABC5DAD2916BED20073AB48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4ABC5DAE2916BED20073AB48 /* Build configuration list for PBXNativeTarget "iMeme" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ABC5DAF2916BED20073AB48 /* Debug */,
+				4ABC5DB02916BED20073AB48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4ABC5DB12916BED20073AB48 /* Build configuration list for PBXNativeTarget "iMemeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ABC5DB22916BED20073AB48 /* Debug */,
+				4ABC5DB32916BED20073AB48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4ABC5DB42916BED20073AB48 /* Build configuration list for PBXNativeTarget "iMemeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ABC5DB52916BED20073AB48 /* Debug */,
+				4ABC5DB62916BED20073AB48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4ABC5DCB2916BF350073AB48 /* Build configuration list for PBXNativeTarget "iMeme-extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4ABC5DCC2916BF350073AB48 /* Debug */,
+				4ABC5DCD2916BF350073AB48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4ABC5D932916BED20073AB48 /* iMeme.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4ABC5D942916BED20073AB48 /* iMeme.xcdatamodel */,
+			);
+			currentVersion = 4ABC5D942916BED20073AB48 /* iMeme.xcdatamodel */;
+			path = iMeme.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4ABC5D7D2916BED10073AB48 /* Project object */;
+}
