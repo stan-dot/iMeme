@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
-import { FilterQuery, Model, SortOrder } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { ImageObject, ImageObjectDocument } from 'schemas/ImageObject.schema';
+import { FilterQuery, Model } from 'mongoose';
 import { ImageObjectDto } from 'src/types/ImageObjectDto';
+import { ImageObject, ImageObjectDocument } from './ImageObject.schema';
 
 @Injectable()
 export class DatabaseService {

@@ -16,6 +16,9 @@ export class ImageObject {
 
   @Prop()
   creatorId: string;
+
+  @Prop({ required: false })
+  desoUrl: string;
 }
 
 export const ImageObjectSchema = SchemaFactory.createForClass(ImageObject);
