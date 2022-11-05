@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { FilterQuery, Model } from 'mongoose';
 import { ImageObjectDto } from 'src/types/ImageObjectDto';
-import { ImageObject, ImageObjectDocument } from './ImageObject.schema';
+import { ImageObject, ImageObjectDocument } from './schemas/ImageObject.schema';
 
 @Injectable()
 export class DatabaseService {

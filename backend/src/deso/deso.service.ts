@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import Deso from 'deso-protocol';
 import { UploadImageResponse } from 'deso-protocol-types';
 
-import { ImageObject } from 'src/database/ImageObject.schema';
+import { ImageObject } from 'src/database/schemas/ImageObject.schema';
 
 @Injectable()
 export class DesoService {

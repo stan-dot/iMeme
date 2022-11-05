@@ -12,7 +12,7 @@ const mongoUrl = config.get('mongo.url') as string;
 @Module({
   imports: [MongooseModule.forRoot(mongoUrl), DatabaseModule],
   // imports: [],
-  providers: [AppService, DalleService],
-  controllers: [AppController],
+  // providers: [AppService, DalleService],
+  // controllers: [AppController],
 })
 export class AppModule {}
