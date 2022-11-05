@@ -1,6 +1,6 @@
-require('dotenv').config()
+import dotenv from 'dotenv';
 import { Injectable } from '@nestjs/common';
-const { Configuration, OpenAIApi } = require("openai");
+import { Configuration, CreateImageRequest, OpenAIApi } from 'openai';
 
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
@@ -11,13 +11,15 @@ const openai = new OpenAIApi(configuration);
 export class DalleService {
   async getImageUrl(): Promise<string> {
     return new Promise((resolve, reject) => {
-      openai.createImage({
+      const newLocal: CreateImageRequest = {
         prompt: 'duck',
         n: 1,
-        size: "256x256",
-      }).then(response => resolve(response.data.data[0].url))
-        .catch(err => reject(err))
-    })
+        size: '256x256',
+      };
+      openai
+        .createImage(newLocal)
+        .then((requestConfig) => resolve(requestConfig.data.data[0].url))
+        .catch((err) => reject(err));
+    });
   }
-
 }
