@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Model } from 'mongoose';
+import { FilterQuery, Model, SortOrder } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { ImageObject, ImageObjectDocument } from 'schemas/ImageObject.schema';
 import { ImageObjectDto } from 'src/types/ImageObjectDto';
@@ -28,6 +28,15 @@ export class DatabaseService {
     return this.imageObjectModel.findOne({ _id: id }).exec();
   }
 
+  async findMatchingKeyword(keyword: string): Promise<ImageObject[]> {
+    const filter: FilterQuery<ImageObject> = {
+      prompt: {
+        $regex: `${keyword}/i`,
+      },
+    };
+    // -1 is for descending, so the most viewed will have the lowest indexes
+    return this.imageObjectModel.find(filter).sort({ views: -1 }).exec();
+  }
   /**
    * NOT IN USE
    * @param id
