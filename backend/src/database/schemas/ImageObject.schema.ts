@@ -14,6 +14,9 @@ export class ImageObject {
   @Prop()
   creatorId: string;
 
+  @Prop()
+  dalleUrl: string;
+
   @Prop({ required: false })
   desoUrl: string;
 }

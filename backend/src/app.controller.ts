@@ -43,6 +43,7 @@ export class AppController {
     );
     const imageObject: ImageObject = {
       prompt: requestDto.prompt,
+      dalleUrl: response.data[0].url,
       views: 0,
       creatorId: '',
       desoUrl: '',
