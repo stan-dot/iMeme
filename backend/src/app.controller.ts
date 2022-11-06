@@ -1,6 +1,5 @@
 import { Controller, Get, Param, Query } from '@nestjs/common';
 import { AppService } from './app.service';
-import { DatabaseService } from './database/database.service';
 import { DalleService } from './dalle/dalle.service';
 import { ImageObjectDto } from './types/ImageObjectDto';
 
@@ -8,9 +7,13 @@ import { ImageObjectDto } from './types/ImageObjectDto';
 export class AppController {
   constructor(
     private readonly appService: AppService,
-    private readonly databaseService: DatabaseService,
     private readonly dalleService: DalleService,
   ) {}
+
+  @Get()
+  test() {
+    return this.appService.getHello()
+  }
 
   @Get('dalle/:prompt?')
   async getHello(
@@ -26,9 +29,9 @@ export class AppController {
     return this.dalleService.getImageUrl(dto);
   }
 
-  @Get('library/:params')
-  async getLibrary(@Param('params') params: string): Promise<object> {
-    console.log(params);
-    return Promise.resolve({ ok: true });
-  }
+  // @Get('library/:params')
+  // async getLibrary(@Param('params') params: string): Promise<object> {
+  //   console.log(params);
+  //   return Promise.resolve({ ok: true });
+  // }
 }

@@ -1,9 +1,9 @@
-version: "3.8"
+# version: "3.8"
 
-services:
-  mongodb:
-    image: mongo:latest
-    environment:
-      - MONGODB_DATABASE="test"
-    ports:
-      - 27017:27017
+# services:
+#   mongodb:
+#     image: mongo:latest
+#     environment:
+#       - MONGODB_DATABASE="test"
+#     ports:
+#       - 27017:27017
