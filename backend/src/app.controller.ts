@@ -60,11 +60,21 @@ export class AppController {
   @Get('library/:params')
   async getLibrary(@Param('params') params: string): Promise<object> {
     console.log(params);
-    return Promise.resolve({ ok: true });
+    let response = {};
+    this.databaseService
+      .findOne(params)
+      .then((obj: ImageObject) => {
+        response = obj.dalleUrl;
+      })
+      .catch((reason: any) => {
+        console.error('could not find the id');
+        response = new HttpException('Not found', HttpStatus.NOT_FOUND);
+      });
+    return response;
   }
 
   @All('*')
-  defaultController(): Promise<string> {
-    throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
+  defaultController(): HttpException {
+    return new HttpException('Forbidden', HttpStatus.FORBIDDEN);
   }
 }
