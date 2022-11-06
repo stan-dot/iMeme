@@ -42,14 +42,10 @@ export class DalleService {
   }
   public async getImageResponse(arg: GenConfig): Promise<ImagesResponse> {
     const request: CreateImageRequest = this._querySanitizer(arg);
-    const testReq: CreateImageRequest = { prompt: 'hello world', n: 1, size: '256x256' }
-    console.log(request)
-    console.log(testReq)
 
     return new Promise((resolve, reject) => {
       openai
-        // .createImage({prompt: 'hello', n: 1, size: '256x256'})
-        .createImage(testReq)
+        .createImage(request)
         .then((response: AxiosResponse<ImagesResponse, any>) => {
           const data: ImagesResponse = response.data;
           resolve(data);
