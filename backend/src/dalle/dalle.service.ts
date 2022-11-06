@@ -27,8 +27,11 @@ export class DalleService {
     const sizeRequested: string = allowedSize.includes(size)
       ? size
       : allowedSize[0];
+
+    const promptRequested = query.prompt.replace(/_/g, ' ');
+
     const sanitizedRequest: CreateImageRequest = {
-      prompt: query.prompt,
+      prompt: promptRequested,
       n: numberRequested,
       size: sizeRequested as CreateImageRequestSizeEnum,
     };
@@ -36,7 +39,6 @@ export class DalleService {
   }
   public async getImageResponse(arg: GenConfig): Promise<ImagesResponse> {
     const request: CreateImageRequest = this._querySanitizer(arg);
-    console.log('request:', request);
     return new Promise((resolve, reject) => {
       openai
         .createImage(request)
