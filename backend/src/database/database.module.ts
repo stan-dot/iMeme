@@ -9,16 +9,6 @@ import { ImageObject, ImageObjectSchema } from './schemas/ImageObject.schema';
     MongooseModule.forFeature([
       { name: ImageObject.name, schema: ImageObjectSchema },
     ]),
-    // MongooseModule.forFeatureAsync([
-    //   {
-    //     name: ImageObject.name,
-    //     useFactory: () => {
-    //       const schema = ImageObjectSchema;
-    //       schema.pre('save', () => console.log('Hello from pre save'));
-    //       return schema;
-    //     },
-    //   },
-    // ]),
   ],
   controllers: [DatabaseController],
   providers: [DatabaseService],
@@ -26,6 +16,7 @@ import { ImageObject, ImageObjectSchema } from './schemas/ImageObject.schema';
     MongooseModule.forFeature([
       { name: ImageObject.name, schema: ImageObjectSchema },
     ]),
+    DatabaseService,
   ],
 })
 export class DatabaseModule {}

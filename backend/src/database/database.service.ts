@@ -1,7 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { FilterQuery, Model } from 'mongoose';
-import { ImageObjectDto } from 'src/types/ImageObjectDto';
 import { ImageObject, ImageObjectDocument } from './schemas/ImageObject.schema';
 
 @Injectable()
@@ -15,9 +14,9 @@ export class DatabaseService {
     return 'this will talk to some databse';
   }
 
-  async create(createImageDto: ImageObjectDto): Promise<ImageObject> {
-    const createdCat = new this.imageObjectModel(createImageDto);
-    return createdCat.save();
+  async create(image: ImageObject): Promise<ImageObject> {
+    const createdImage = new this.imageObjectModel(image);
+    return createdImage.save();
   }
 
   async findAll(): Promise<ImageObject[]> {

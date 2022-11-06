@@ -1,5 +1,5 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
-import { ImageObjectDto } from 'src/types/ImageObjectDto';
+import { Controller, Delete, Get, Param } from '@nestjs/common';
+import { GenConfig } from 'src/types/ImageObjectDto';
 import { DatabaseService } from './database.service';
 import { ImageObject } from './schemas/ImageObject.schema';
 
@@ -7,18 +7,18 @@ import { ImageObject } from './schemas/ImageObject.schema';
 export class DatabaseController {
   constructor(private readonly databaseService: DatabaseService) {}
 
-  @Post()
-  async create(@Body() createCatDto: ImageObjectDto) {
-    await this.databaseService.create(createCatDto);
-  }
+  // @Post()
+  // async create(@Body() object: ImageObject) {
+  //   await this.databaseService.create(object);
+  // }
 
-  @Get()
+  @Get('all')
   async findAll(): Promise<ImageObject[]> {
     return this.databaseService.findAll();
   }
 
   @Get(':id')
-  async findOne(@Param('id') id: string): Promise<ImageObjectDto> {
+  async findOne(@Param('id') id: string): Promise<GenConfig> {
     return this.databaseService.findOne(id);
   }
 

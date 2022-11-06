@@ -2,7 +2,9 @@ import { Controller, Get, Param, Query } from '@nestjs/common';
 import { AppService } from './app.service';
 import { DatabaseService } from './database/database.service';
 import { DalleService } from './dalle/dalle.service';
-import { ImageObjectDto } from './types/ImageObjectDto';
+import { GenConfig } from './types/ImageObjectDto';
+import { ImagesResponse, ImagesResponseDataInner } from 'openai';
+import { ImageObject } from './database/schemas/ImageObject.schema';
 
 @Controller()
 export class AppController {
@@ -13,17 +15,32 @@ export class AppController {
   ) {}
 
   @Get('dalle/:prompt?')
-  async getHello(
+  async getNewImage(
     @Param('prompt') prompt: string,
     @Query('number') number: number,
     @Query('size') size: string,
   ): Promise<string> {
-    const dto: ImageObjectDto = {
+    const requestDto: GenConfig = {
       prompt,
       number,
       size,
     };
-    return this.dalleService.getImageUrl(dto);
+    const response: ImagesResponse = await this.dalleService.getImageResponse(
+      requestDto,
+    );
+    const imageObject: ImageObject = {
+      prompt: requestDto.prompt,
+      views: 0,
+      creatorId: '',
+      desoUrl: '',
+    };
+    console.log('object: ', imageObject);
+    // THAT IS A SIDE EFFECT
+    const dbResponse = await this.databaseService.create(imageObject);
+    console.log('database response:', dbResponse);
+    const innerData: ImagesResponseDataInner[] = response.data;
+    const url: string = innerData[0].url;
+    return url;
   }
 
   @Get('library/:params')

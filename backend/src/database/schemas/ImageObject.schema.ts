@@ -5,9 +5,6 @@ export type ImageObjectDocument = HydratedDocument<ImageObject>;
 
 @Schema()
 export class ImageObject {
-  @Prop({ required: true })
-  data: string;
-
   @Prop()
   prompt: string;
 
