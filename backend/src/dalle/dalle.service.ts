@@ -18,29 +18,43 @@ const openai = new OpenAIApi(configuration);
 @Injectable()
 export class DalleService {
   private _querySanitizer(query: GenConfig): CreateImageRequest {
-    console.log('query: ', query);
+    // console.log('query: ', query);
     const numberRequested: number =
       query.number >= 1 && query.number <= 10 ? query.number : 1 ?? 1;
+    console.log('line 24')
+    console.log(typeof numberRequested)
     const sizeRequested: string = allowedSize.includes(query.size)
       ? query.size
       : allowedSize[0];
+
+    const promptRequested = query.prompt.replace(/_/g, ' ')
+
     const sanitizedRequest: CreateImageRequest = {
-      prompt: '',
-      n: numberRequested,
+      prompt: promptRequested,
+      n: (numberRequested),
       size: sizeRequested as CreateImageRequestSizeEnum,
     };
+    console.log(sanitizedRequest)
     return sanitizedRequest;
   }
   public async getImageResponse(arg: GenConfig): Promise<ImagesResponse> {
     const request: CreateImageRequest = this._querySanitizer(arg);
+    const testReq: CreateImageRequest = { prompt: 'hello world', n: 1, size: '256x256' }
+    console.log(request)
+    console.log(testReq)
+
     return new Promise((resolve, reject) => {
       openai
-        .createImage(request)
+        // .createImage({prompt: 'hello', n: 1, size: '256x256'})
+        .createImage(testReq)
         .then((response: AxiosResponse<ImagesResponse, any>) => {
           const data: ImagesResponse = response.data;
           resolve(data);
         })
-        .catch((err) => reject(err));
+        .catch((err) => {
+          console.log(err.response.data)
+          reject(err)
+        });
     });
   }
 }
