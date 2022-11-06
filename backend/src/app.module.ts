@@ -6,7 +6,10 @@ import { AppService } from './app.service';
 import { DalleService } from './dalle/dalle.service';
 import { DatabaseModule } from './database/database.module';
 
-const mongoUrl = config.get('mongo.url') as string;
+let mongoUrl = config.get('mongo.url') as string;
+// if (mongoUrl.length > 60 && process.env.MONGO_DB_PASSWORD) {
+mongoUrl = mongoUrl.replace('<password>', process.env.MONGO_DB_PASSWORD);
+// }
 
 @Module({
   imports: [MongooseModule.forRoot(mongoUrl), DatabaseModule],
