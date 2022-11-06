@@ -1,4 +1,12 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import {
+  All,
+  Controller,
+  Get,
+  HttpException,
+  HttpStatus,
+  Param,
+  Query,
+} from '@nestjs/common';
 import { AppService } from './app.service';
 import { DatabaseService } from './database/database.service';
 import { DalleService } from './dalle/dalle.service';
@@ -47,5 +55,10 @@ export class AppController {
   async getLibrary(@Param('params') params: string): Promise<object> {
     console.log(params);
     return Promise.resolve({ ok: true });
+  }
+
+  @All('*')
+  defaultController(): Promise<string> {
+    throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
   }
 }
