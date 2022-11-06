@@ -22,6 +22,11 @@ export class AppController {
     private readonly dalleService: DalleService,
   ) {}
 
+  @Get('dalle')
+  getApiDescription(): string {
+    return 'hi, that is a dalle api proxy';
+  }
+
   @Get('dalle/:prompt?')
   async getNewImage(
     @Param('prompt') prompt: string,

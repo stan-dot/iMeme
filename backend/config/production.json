@@ -1,5 +1,5 @@
 {
   "mongo": {
-    "url": "mongodb://localhost/nest"
+    "url": "mongodb+srv://admin:<password>@cluster0.a08bc.mongodb.net/?retryWrites=true&w=majority"
   }
 }

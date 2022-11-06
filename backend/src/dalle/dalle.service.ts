@@ -1,4 +1,6 @@
 import { Injectable } from '@nestjs/common';
+import * as dotenv from 'dotenv';
+dotenv.config();
 import { AxiosResponse } from 'axios';
 import {
   Configuration,
@@ -13,6 +15,7 @@ const allowedSize: string[] = ['256x256', '512x512', '1024x1024'];
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
+console.log('open ai connection config', configuration);
 const openai = new OpenAIApi(configuration);
 
 @Injectable()
